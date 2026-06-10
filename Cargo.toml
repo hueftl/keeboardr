@@ -32,6 +32,7 @@ defmt = "1.0"
 defmt-rtt = "1.0"
 panic-probe = { version = "1.0", features = ["print-defmt"] }
 embassy-usb-driver = "=0.2.0"
+portable-atomic = { version = "1.13.1", features = ["critical-section"] }
 
 [build-dependencies]
 xz2 = "0.1.7"
@@ -57,3 +58,6 @@ debug = true            # no overhead for bare-metal
 opt-level = "z"         # optimize for binary size
 overflow-checks = false
 lto = "fat"
+
+[dev-dependencies]
+portable-atomic = { version = "1.13.1", features = ["critical-section", "unsafe-assume-single-core"] }

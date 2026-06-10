@@ -31,3 +31,12 @@ keymap = [
         ["_", "_", "_"]
     ],
 ]
+
+[storage]
+enabled = false
+
+[dependency]
+defmt_log = false
+
+[host]
+vial_enabled = false

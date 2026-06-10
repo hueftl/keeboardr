@@ -24,7 +24,6 @@ fn main() {
 
     generate_vial_config();
 
-
     // Specify linker arguments.
 
     // `--nmagic` is required if memory section addresses are not aligned to 0x10000,
@@ -46,7 +45,7 @@ fn generate_vial_config() {
     // Generated vial config file
     let out_file = Path::new(&env::var_os("OUT_DIR").unwrap()).join("config_generated.rs");
 
-    let p = Path::new("vial.json");
+    let p = Path::new("keymap/vial.json");
     let mut content = String::new();
     match File::open(p) {
         Ok(mut file) => {
