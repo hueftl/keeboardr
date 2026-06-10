@@ -1,0 +1,10 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "probe-rs run --chip stm32f072c8"
+linker = "flip-link"
+
+[build]
+target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
+
+[env]
+DEFMT_LOG = "info"
+KEYBOARD_TOML_PATH =  { value = "keyboard.toml", relative = true }
