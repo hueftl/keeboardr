@@ -5,6 +5,7 @@ vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "RMK"
 chip = "stm32f072c8"
+usb_enable = true
 
 [matrix]
 # Row and col pins are mandatory
