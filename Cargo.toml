@@ -57,6 +57,7 @@ debug = true            # no overhead for bare-metal
 opt-level = "z"         # optimize for binary size
 overflow-checks = false
 lto = "fat"
+panic = 'abort'
 
 [dev-dependencies]
 portable-atomic = { version = "1.13.1", features = ["critical-section", "unsafe-assume-single-core"] }
